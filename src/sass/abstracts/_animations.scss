@@ -1,0 +1,39 @@
+@keyframes enter-left {
+  0% {
+    transform: translateX(-120%);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes exit-left {
+  0% {
+    transform: translate(0);
+  }
+
+  100% {
+    transform: translateX(-120%);
+  }
+}
+
+@keyframes enter-right {
+  0% {
+    transform: translateX(120%);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes exit-right {
+  0% {
+    transform: translate(0);
+  }
+
+  100% {
+    transform: translateX(120%);
+  }
+}

@@ -1,29 +1,89 @@
 .testimonials {
   position: relative;
   width: 100%;
-  padding-top: 5.5rem;
+  padding-top: 0.6rem;
 
   &__item {
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
+    padding-bottom: 5rem;
 
     &:not(&--active) {
-      display: none;
+      position: absolute;
+      top: 5px;
+      left: 0;
+      opacity: 0;
+      transition: opacity 0.5s, position 0.5s;
+    }
+
+    /*************************************
+     * ANIMACIONES PARA LOS TESTIMONIALS *
+     *************************************/
+
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+
+    &--exit-left {
+      animation-name: exit-left;
+    }
+
+    &--exit-right {
+      animation-name: exit-right;
+    }
+
+    &--enter-left {
+      animation-name: enter-left;
+    }
+
+    &--enter-right {
+      animation-name: enter-right;
     }
   }
 
   &__testimonial-section {
+    margin-top: 6.525rem;
+  }
+
+  &__quote {
+    position: relative;
+
+    &::before {
+      content: url("../images/pattern-quotes.svg");
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -49%) scale(0.5);
+    }
   }
 
   &__author-info {
     margin-top: 2rem;
   }
 
+  &__author-picture-container {
+    position: relative;
+    padding-top: 2.5rem;
+    padding-bottom: 1rem;
+
+    &::before {
+      z-index: -10;
+
+      background-image: url("../images/pattern-bg.svg");
+      background-size: 100% 100%;
+      position: absolute;
+      top: -5px;
+      left: 0;
+      width: 101.5%;
+      height: 103.75%;
+      background-repeat: no-repeat;
+      content: "";
+    }
+  }
+
   &__author-picture {
     width: 80.25%;
-    margin-bottom: 8.2725rem;
     border-radius: 5px;
 
     box-shadow: -4.5rem 8rem 3rem -7rem $gray-blue;
@@ -31,7 +91,7 @@
 
   &__button-container {
     position: absolute;
-    top: 51.75%;
+    top: 77vw;
     left: 50%;
     transform: translate(-50%, -50%);
 

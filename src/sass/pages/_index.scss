@@ -1,11 +1,18 @@
 .index-body {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   padding: 0 3rem;
 
-  background-image: url("../images/pattern-bg.svg"),
-    url("../images/pattern-quotes.svg"), url("../images/pattern-curve.svg");
+  background-image: url("../images/pattern-curve.svg");
   background-repeat: no-repeat;
-  background-position: 50% 7%, 50% 59%, 0 100%;
-  background-size: 86.75%, 16.25%, 76.5%;
+  background-position: 0 100%;
+  background-size: 76.5%;
+
+  display: flex;
+
+  overflow-x: hidden;
+}
+
+.testimonials {
+  margin: auto;
 }
