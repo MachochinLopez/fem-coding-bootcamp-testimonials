@@ -8,31 +8,46 @@
   
   <title>Frontend Mentor | Coding Bootcamp Testimonials Slider</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-
-  “ I’ve been interested in coding for a while but never taken the jump, until now. 
-  I couldn’t recommend this course enough. I’m now in the job of my dreams and so 
-  excited about the future. ”
-
-  Tanya Sinclair
-  UX Engineer
-
-  “ If you want to lay the best foundation possible I’d recommend taking this course. 
-  The depth the instructors go into is incredible. I now feel so confident about 
-  starting up as a professional developer. ”
-
-  John Tarkpor
-  Junior Front-end Developer
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+<body class="index-body">
+  <div class="testimonials">
+    <div class="testimonials__items-container">
+      <article class="testimonials__item testimonials__item--active">
+        <div class="testimonials__testimonial-section">
+          <h3 class="testimonials__quote">“ I’ve been interested in coding for a while but never taken the jump, until now. 
+            I couldn’t recommend this course enough. I’m now in the job of my dreams and so 
+            excited about the future. ”</h3>
+          <div class="testimonials__author-info">
+            <h5 class="testimonials__author-name">Tanya Sinclair</h5>
+            <p class="testimonials__author-role">UX Engineer</p>
+          </div>
+        </div>
+        <img class="testimonials__author-picture" src="images/image-tanya.jpg" alt="Author's picture">
+      </article>
+      <article class="testimonials__item">
+        <div class="testimonials__testimonial-section">
+          <h3 class="testimonials__quote">“ If you want to lay the best foundation possible I’d recommend taking this course. 
+            The depth the instructors go into is incredible. I now feel so confident about 
+            starting up as a professional developer. ”</h3>
+          <div class="testimonials__author-info">
+            <h5 class="testimonials__author-name">John Tarkpor</h5>
+            <p class="testimonials__author-role">Junior Front-end Developer</p>
+          </div>
+        </div>
+        <img class="testimonials__author-picture" src="images/image-john.jpg" alt="Author's picture">
+      </article>
+    </div>
+    <div class="testimonials__button-container">
+      <button class="testimonials__button testimonials__button--previous">
+        <img src="images/icon-prev.svg" alt="Previous testimonial">
+      </button>
+      <button class="testimonials__button testimonials__button--next">
+        <img src="images/icon-next.svg" alt="Next testimonial">
+      </button>
+    </div>
   </div>
+
+  <script src="js/change_testimonial.js"></script>
 </body>
 </html>
